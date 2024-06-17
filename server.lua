@@ -28,7 +28,7 @@ RegisterNetEvent('vivify:server:openDumpsterInventory', function(dumpsterName)
     local Player = QBCore.Functions.GetPlayer(src)
 
     if Player then
-        exports['qb-inventory']:OpenInventory(src, dumpsterName, {
+        TriggerClientEvent('inventory:client:OpenInventory', src, 'stash', dumpsterName, {
             maxweight = 1000000,
             slots = 50,
         })
